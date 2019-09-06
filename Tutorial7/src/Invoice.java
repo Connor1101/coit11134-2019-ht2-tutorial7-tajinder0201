@@ -82,6 +82,8 @@ public class Invoice implements Payable
 	public double getPaymentAmount()
 	{
 		// calculate total cost and return
+            double totalCost=pricePerItem*quantity;
+            return totalCost;
 		// missing block of codes have to be completed
 		
 	} // end method getPaymentAmount
