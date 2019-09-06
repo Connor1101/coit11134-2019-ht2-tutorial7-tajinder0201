@@ -2,6 +2,11 @@ public class BuildingDevelopmentApplication
 {
 	// create instance fields to store the values of plot width and length; building
 	// width and length
+    
+     double plotLength;
+     double plotWidth;
+     double buildingLength;
+     double buildingWidth;
 	// complete the missing block of codes
 	
 	boolean approved = false;
@@ -9,6 +14,10 @@ public class BuildingDevelopmentApplication
 	public BuildingDevelopmentApplication(double plotLength, double plotWidth, double buildingLength, double buildingWidth)
 	{
 		// complete the missing block of codes
+            this.buildingLength=buildingLength;
+            this.buildingWidth=buildingWidth;
+            this.plotLength=plotLength;
+            this.plotWidth=plotWidth;
 	}
 	
 	// inner class to verify the building plan adheres to front, rear and sides
@@ -35,11 +44,21 @@ public class BuildingDevelopmentApplication
 		boolean checkWidth()
 		{
 			// complete the missing block of codes
-		}
+                    if(buildingWidth<=plotWidth-MINIMUM_REQUIRED)
+                    return true;
+                    else 
+                        return false;
+                    
+                    
+		};
 		
 		boolean checkLength()
 		{
 			// complete the missing block of codes
+                    if(buildingLength<=plotLength-MINIMUM_REQUIRED)
+                    return true;
+                    else 
+                        return false;
 		}
 	}
 	
